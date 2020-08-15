@@ -83,6 +83,16 @@ export default class PreloaderScene extends Phaser.Scene {
 
     // load assets needed in our game
     this.load.image('background', 'src/assets/bg_layer1.png');
+    this.load.image('intro_button1', 'src/assets/ui/intro_button1.png');
+    this.load.image('intro_button2', 'src/assets/ui/intro_button2.png');
+    this.load.image('start_button1', 'src/assets/ui/start_button1.png');
+    this.load.image('start_button2', 'src/assets/ui/start_button2.png');
+    this.load.image('option_button1', 'src/assets/ui/option_button1.png');
+    this.load.image('option_button2', 'src/assets/ui/option_button2.png');
+    this.load.image('credit_button1', 'src/assets/ui/credit_button1.png');
+    this.load.image('credit_button2', 'src/assets/ui/credit_button2.png');
+    this.load.image('leader_button1', 'src/assets/ui/leader_button1.png');
+    this.load.image('leader_button2', 'src/assets/ui/leader_button2.png');
 
   }
 
