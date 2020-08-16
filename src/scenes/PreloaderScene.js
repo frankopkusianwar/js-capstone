@@ -94,6 +94,30 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('leader_button1', 'src/assets/ui/leader_button1.png');
     this.load.image('leader_button2', 'src/assets/ui/leader_button2.png');
 
+    // map tiles
+    this.load.image('tiles', 'src/assets/ui/map/spritesheet.png');
+
+    // map in json format
+    this.load.tilemapTiledJSON('map', 'src/assets/ui/map/map.json');
+
+    // battle map in json format
+    this.load.tilemapTiledJSON('battle-map', 'src/assets/ui/map/battle.json');
+
+    // hero spritesheet
+    this.load.spritesheet('warrior', 'src/assets/ui/hero_sprite.png', { frameWidth: 32, frameHeight: 64 });
+
+    // fireball image
+    this.load.image('fireball', 'src/assets/ui/fireball.png');
+
+    // explosion image
+    this.load.spritesheet('explosion', 'src/assets/ui/explosion.png', { frameWidth: 400, frameHeight: 400 });
+
+    // sword flash image
+    this.load.spritesheet('sword_flash', 'src/assets/ui/sword_flash.png', { frameWidth: 33, frameHeight: 33 });
+
+    // kraken spritesheet
+    this.load.spritesheet('dragon', 'src/assets/ui/Dragon.png', { frameWidth: 200, frameHeight: 128 });
+
   }
 
   ready() {
