@@ -1,6 +1,6 @@
 const entity = {
   warriorHealth: 100,
-  DragonHealth: 1000,
+  dragonHealth: 1000,
   swordDamage: 20,
   fireballDamage: 10,
 };

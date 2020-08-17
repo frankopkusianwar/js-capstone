@@ -29,13 +29,13 @@ export default class BattleScene extends Phaser.Scene {
     (() => new Fireball(this, angle))();
   }
 
-  updateKrakenHealth(DragonHealth, damage) {
-    return DragonHealth - damage;
+  updateDragonHealth(dragonHealth, damage) {
+    return dragonHealth - damage;
   }
 
   onAttack() {
     if (Phaser.Input.Keyboard.JustDown(this.space)) {
-      this.DragonHealth = this.updateDragonHealth(this.DragonHealth, this.swordDamage);
+      this.dragonHealth = this.updateDragonHealth(this.dragonHealth, this.swordDamage);
 
       this.swordFlash.x = this.warrior.x + 20;
       this.swordFlash.y = this.warrior.y - 20;
@@ -61,7 +61,7 @@ export default class BattleScene extends Phaser.Scene {
     this.scene.start('GameOver');
   }
 
-  DragonDied() {
+  dragonDied() {
     this.showWinBanner();
 
     this.explosion.visible = true;
@@ -75,7 +75,7 @@ export default class BattleScene extends Phaser.Scene {
 
   create() {
     this.warriorHealth = entity.warriorHealth;
-    this.DragonHealth = entity.DragonHealth;
+    this.dragonHealth = entity.dragonHealth;
 
     const battleMap = this.make.tilemap({ key: 'battle-map' });
 
@@ -103,10 +103,10 @@ export default class BattleScene extends Phaser.Scene {
 
     this.space = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
-    this.Dragon = new Dragon(this, 400, 320);
-    this.DragonHealthText = this.add.text(300, 220, `Health: ${this.DragonHealth}`, { fontSize: '26px', fill: '#000' });
+    this.dragon = new Dragon(this, 400, 320);
+    this.dragonHealthText = this.add.text(300, 220, `Health: ${this.dragonHealth}`, { fontSize: '26px', fill: '#000' });
 
-    this.physics.add.collider(this.warrior, this.Dragon, this.onAttack, false, this);
+    this.physics.add.collider(this.warrior, this.dragon, this.onAttack, false, this);
 
     this.lastFired = 0;
     this.projectiles = this.add.group();
@@ -148,9 +148,9 @@ export default class BattleScene extends Phaser.Scene {
     this.warriorHealthText.y = this.warrior.y - 45;
     this.warriorHealthText.text = `Health: ${this.warriorHealth}`;
 
-    this.DragonHealthText.text = `Health: ${this.DragonHealth}`;
+    this.dragonHealthText.text = `Health: ${this.dragonHealth}`;
 
-    this.Dragon.anims.play('idle', true);
+    this.dragon.anims.play('idle', true);
 
     this.warrior.body.setVelocity(0);
 
@@ -197,8 +197,8 @@ export default class BattleScene extends Phaser.Scene {
       this.warriorDied();
     }
 
-    if (this.DragonHealth <= 0) {
-      this.DragonDied();
+    if (this.dragonHealth <= 0) {
+      this.dragonDied();
     }
   }
 }
