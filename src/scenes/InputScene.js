@@ -21,10 +21,7 @@ export default class InputScene extends Phaser.Scene {
     submitButton.addEventListener('click', () => {
       if (input.value !== '') {
         const loading = this.add.text(350, 250, 'Loading...', { color: 'white', fontSize: '26px ' });
-        addScore(input.value, localStorage.getItem('score')).then(() => {
-          loading.destroy();
-          this.scene.start('Title');
-        })
+        localStorage.setItem('name', JSON.stringify(input.value));
         this.scene.start('Title');
       } else {
         this.add.text(250, 320, 'Please Fill In Username', { fontSize: 20, fill: '#fff' });

@@ -93,6 +93,10 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('credit_button2', 'src/assets/ui/credit_button2.png');
     this.load.image('leader_button1', 'src/assets/ui/leader_button1.png');
     this.load.image('leader_button2', 'src/assets/ui/leader_button2.png');
+    this.load.image('menu_button1', 'src/assets/ui/menu_button1.png');
+    this.load.image('menu_button2', 'src/assets/ui/menu_button2.png');
+
+
 
     // map tiles
     this.load.image('tiles', 'src/assets/ui/map/spritesheet.png');
