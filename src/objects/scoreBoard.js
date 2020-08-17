@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/hmWnUD7qFZoQaI0x0Zww/scores/';
 
-export const addcore = async (user, score) => {
+export const addScore = async (user, score) => {
   const content = JSON.stringify({ user, score });
   const data = {
     method: 'POST',

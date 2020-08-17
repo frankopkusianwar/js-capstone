@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import './style/style.css'
 import config from './config/config';
-import BootScene from './Scenes/BootScene';
+import BootScene from './scenes/BootScene';
 import PreloaderScene from './Scenes/PreloaderScene';
 import TitleScene from './scenes/TitleScene';
 import WorldScene from './scenes/WorldScene';
