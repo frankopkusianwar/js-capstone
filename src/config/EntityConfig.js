@@ -1,8 +1,8 @@
 const entity = {
-  warriorHealth: 100,
-  dragonHealth: 1000,
-  swordDamage: 20,
-  fireballDamage: 10,
+  warriorHealth: 50,
+  dragonHealth: 500,
+  swordDamage: 10,
+  fireballDamage: 5,
 };
 
 export default entity;

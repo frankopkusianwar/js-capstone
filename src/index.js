@@ -6,7 +6,7 @@ import TitleScene from './scenes/TitleScene';
 import WorldScene from './scenes/WorldScene';
 import CreditScene from './scenes/CreditScene'
 import BattleScene from './scenes/BattleScene'
-
+import GameOvereScene from './scenes/GameOverScene'
 
 
 class Game extends Phaser.Game {
@@ -18,6 +18,7 @@ class Game extends Phaser.Game {
     this.scene.add('World', WorldScene);
     this.scene.add('World', CreditScene);
     this.scene.add('World', BattleScene);
+    this.scene.add('GameOver', GameOvereScene);
     this.scene.start('Boot');
   }
 }

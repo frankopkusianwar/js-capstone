@@ -3,20 +3,17 @@ import Fireball from '../Fireball';
 import Warrior from '../objects/Warrior';
 import Dragon from '../objects/Dragon';
 import entity from '../config/EntityConfig';
-// import API from '../Objects/API';
 
 export default class BattleScene extends Phaser.Scene {
   constructor() {
     super('Battle');
-
-    // this.api = API;
 
     this.swordDamage = entity.swordDamage;
     this.fireballDamage = entity.fireballDamage;
   }
 
   showWinBanner() {
-    this.winText = this.add.text(330, 115, 'You Won!!', { fontSize: '26px', fill: '#fff' });
+    this.winText = this.add.text(330, 115, 'You Won!!', { fontSize: '30px', fill: '#fff' });
     this.banner = this.add.graphics();
 
     this.banner.lineStyle(1, 0xffffff, 0.8);
@@ -154,14 +151,12 @@ export default class BattleScene extends Phaser.Scene {
 
     this.warrior.body.setVelocity(0);
 
-    // Horizontal movement
     if (this.inputKeys.left.isDown) {
       this.warrior.body.setVelocityX(-100);
     } else if (this.inputKeys.right.isDown) {
       this.warrior.body.setVelocityX(100);
     }
 
-    // Vertical movement
     if (this.inputKeys.up.isDown) {
       this.warrior.body.setVelocityY(-100);
     } else if (this.inputKeys.down.isDown) {
