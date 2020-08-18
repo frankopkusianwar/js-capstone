@@ -11,10 +11,9 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   preload() {
-    // add logo image
-    this.add.image(400, 200, 'logo');
 
-    // display progress bar
+    // this.add.image(400, 200, 'logo', { width: '100px', height: '100px' } );
+
     const progressBar = this.add.graphics();
     const progressBox = this.add.graphics();
 
@@ -28,7 +27,7 @@ export default class PreloaderScene extends Phaser.Scene {
       y: height / 2 - 50,
       text: 'Loading...',
       style: {
-        font: '20px monospace',
+        font: '20px',
         fill: '#ffffff',
       },
     });
@@ -56,7 +55,6 @@ export default class PreloaderScene extends Phaser.Scene {
     });
     assetText.setOrigin(0.5, 0.5);
 
-    // update progress bar
     this.load.on('progress', (value) => {
       percentText.setText(`${parseInt(value * 100, 10)}%`);
       progressBar.clear();
@@ -64,12 +62,12 @@ export default class PreloaderScene extends Phaser.Scene {
       progressBar.fillRect(250, 300, 300 * value, 30);
     });
 
-    // update file progress text
+  
     this.load.on('fileprogress', (file) => {
       assetText.setText(`Loading asset: ${file.key}`);
     });
 
-    // remove progress bar when complete
+  
     this.load.on('complete', () => {
       progressBar.destroy();
       progressBox.destroy();
@@ -81,7 +79,6 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.timedEvent = this.time.delayedCall(3000, this.ready, [], this);
 
-    // load assets needed in our game
     this.load.image('background', 'src/assets/bg_layer1.png');
     this.load.image('intro_button1', 'src/assets/ui/intro_button1.png');
     this.load.image('intro_button2', 'src/assets/ui/intro_button2.png');
@@ -98,28 +95,13 @@ export default class PreloaderScene extends Phaser.Scene {
 
 
 
-    // map tiles
     this.load.image('tiles', 'src/assets/ui/map/spritesheet.png');
-
-    // map in json format
     this.load.tilemapTiledJSON('map', 'src/assets/ui/map/map.json');
-
-    // battle map in json format
     this.load.tilemapTiledJSON('battle-map', 'src/assets/ui/map/battle.json');
-
-    // hero spritesheet
     this.load.spritesheet('warrior', 'src/assets/ui/hero_sprite.png', { frameWidth: 32, frameHeight: 64 });
-
-    // fireball image
     this.load.image('fireball', 'src/assets/ui/fireball.png');
-
-    // explosion image
     this.load.spritesheet('explosion', 'src/assets/ui/explosion.png', { frameWidth: 400, frameHeight: 400 });
-
-    // sword flash image
     this.load.spritesheet('sword_flash', 'src/assets/ui/sword_flash.png', { frameWidth: 33, frameHeight: 33 });
-
-    // Dragon spritesheet
     this.load.spritesheet('dragon', 'src/assets/ui/Dragon.png', { frameWidth: 200, frameHeight: 128 });
 
   }

@@ -8,7 +8,7 @@ export default class LeaderBoardScene extends Phaser.Scene {
   }
 
   create() {
-    this.cameras.main.setBackgroundColor('#000111');
+    this.add.image(400, 300, 'background');
 
     getScores().then((scores) => {
       scores.sort((a, b) => b.score - a.score);

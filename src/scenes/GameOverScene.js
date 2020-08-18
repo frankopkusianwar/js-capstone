@@ -10,6 +10,7 @@ export default class GameOverScene extends Phaser.Scene {
   }
 
   create() {localStorage
+    this.add.image(400, 300, 'background');
     addScore(JSON.parse(localStorage.getItem('name')), JSON.parse(localStorage.getItem('score')))
     
     this.overText = this.add.text(this.game.config.width * 0.5, 128, 'GAME OVER', {
@@ -18,7 +19,8 @@ export default class GameOverScene extends Phaser.Scene {
       color: '#ffffff',
     });
     this.overText.setOrigin(0.5);
-    this.title = this.add.text(
+
+    this.overText = this.add.text(
       this.game.config.width * 0.5,
       200,
       `Your score is: ${JSON.parse(localStorage.getItem('score'))}`,

@@ -7,8 +7,8 @@ export default class InputScene extends Phaser.Scene {
   }
 
   create() {
-    this.add.text(300, 70, 'Welcome!', { fontSize: 50, fill: '#fff' });
-    this.add.text(230, 190, 'Let\'s get your name... ', { fontSize: 30, fill: '#fff' });
+    this.add.text(300, 70, 'Welcome!', { fontSize: 50, fill: 'white' });
+    this.add.text(230, 190, 'Let\'s get your name... ', { fontSize: 30, fill: 'white' });
 
     const div = document.createElement('div');
     div.setAttribute('id', 'div');
