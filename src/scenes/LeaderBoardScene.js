@@ -8,7 +8,7 @@ export default class LeaderBoardScene extends Phaser.Scene {
   }
 
   create() {
-    this.add.image(400, 300, 'background');
+    // this.add.image(400, 300, 'background');
 
     getScores().then((scores) => {
       scores.sort((a, b) => b.score - a.score);
@@ -24,7 +24,7 @@ export default class LeaderBoardScene extends Phaser.Scene {
       }
     })
 
-    this.menuButton = new Button(this, 450, 500, 'menu_button1', 'menu_button2', 'Menu', 'Title');
+    this.menuButton = new Button(this, 400, 500, 'menu_button1', 'menu_button2', 'Menu', 'Title');
     
   }
 }
