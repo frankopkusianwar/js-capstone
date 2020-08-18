@@ -2,17 +2,17 @@ import 'regenerator-runtime';
 
 const fetch = require('node-fetch');
 
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/hmWnUD7qFZoQaI0x0Zww/scores/';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/hmWnUD7qFZoQaI0x0Zww/scores';
 
 export const addScore = async (user, score) => {
-  const content = JSON.stringify({ user, score });
+  const body = JSON.stringify({ user, score });
   const data = {
     method: 'POST',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    content,
+    body,
   };
   const response = await fetch(url, data);
   const result = await response.json();
