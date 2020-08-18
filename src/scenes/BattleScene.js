@@ -7,9 +7,11 @@ import entity from '../config/EntityConfig';
 export default class BattleScene extends Phaser.Scene {
   constructor() {
     super('Battle');
-
+    
     this.swordDamage = entity.swordDamage;
     this.fireballDamage = entity.fireballDamage;
+    this.initialScore = 0
+    localStorage.setItem('score', this.initialScore);
   }
 
   showWinBanner() {
@@ -65,7 +67,8 @@ export default class BattleScene extends Phaser.Scene {
     this.explosion.anims.play('explode', true);
 
     this.time.delayedCall(3000, () => {
-      this.saveToLocalStorage();
+      const updatedScore = parseInt(localStorage.getItem('score'), 10) + 100;
+      localStorage.setItem('score', JSON.stringify(updatedScore));
       this.scene.start('World');
     }, [], this);
   }
@@ -100,8 +103,8 @@ export default class BattleScene extends Phaser.Scene {
 
     this.space = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
-    this.dragon = new Dragon(this, 400, 320);
-    this.dragonHealthText = this.add.text(300, 220, `Health: ${this.dragonHealth}`, { fontSize: '26px', fill: '#000' });
+    this.dragon = new Dragon(this, 400, 200);
+    this.dragonHealthText = this.add.text(300, 80, `Health: ${this.dragonHealth}`, { fontSize: '26px', fill: '#000' });
 
     this.physics.add.collider(this.warrior, this.dragon, this.onAttack, false, this);
 

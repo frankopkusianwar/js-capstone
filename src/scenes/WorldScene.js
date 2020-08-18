@@ -27,7 +27,8 @@ export default class WorldScene extends Phaser.Scene {
 
     const obstacles = map.createStaticLayer('obstacles', tiles, 0, 0);
     obstacles.setCollisionByExclusion([-1]);
-
+    const scoreText = this.add.text(15, 15, `Score: ${localStorage.getItem('score')}`, { fontSize: '25px', fill: '#fff' });
+    scoreText.setScrollFactor(0);
     this.warrior = new Warrior(this, 50, 50);
 
     this.physics.world.bounds.width = map.widthInPixels;
