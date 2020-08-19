@@ -11,7 +11,6 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   preload() {
-
     const progressBar = this.add.graphics();
     const progressBox = this.add.graphics();
 
