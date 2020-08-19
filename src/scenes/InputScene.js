@@ -15,7 +15,7 @@ export default class InputScene extends Phaser.Scene {
     this.add.dom(350, 250, div);
 
     const input = document.querySelector('#input');
-    const submitButton = document.querySelector('#button')
+    const submitButton = document.querySelector('#button');
 
     submitButton.addEventListener('click', () => {
       if (input.value !== '') {
@@ -26,5 +26,5 @@ export default class InputScene extends Phaser.Scene {
         this.add.text(250, 320, 'Please Fill In Username', { fontSize: 20, fill: '#fff' });
       }
     });
-   }
+  }
 }

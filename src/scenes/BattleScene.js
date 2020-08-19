@@ -7,10 +7,10 @@ import entity from '../config/EntityConfig';
 export default class BattleScene extends Phaser.Scene {
   constructor() {
     super('Battle');
-    
+
     this.swordDamage = entity.swordDamage;
     this.fireballDamage = entity.fireballDamage;
-    this.initialScore = 0
+    this.initialScore = 0;
     localStorage.setItem('score', this.initialScore);
   }
 

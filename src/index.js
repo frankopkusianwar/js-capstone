@@ -1,16 +1,16 @@
 import Phaser from 'phaser';
-import './style/style.css'
+import './style/style.css';
 import config from './config/config';
 import BootScene from './scenes/BootScene';
 import PreloaderScene from './scenes/PreloaderScene';
 import TitleScene from './scenes/TitleScene';
 import WorldScene from './scenes/WorldScene';
-import CreditScene from './scenes/CreditScene'
-import BattleScene from './scenes/BattleScene'
-import GameOvereScene from './scenes/GameOverScene'
-import IntroScene from './scenes/IntroScene'
-import InputScene from './scenes/InputScene'
-import LeaderBoardScene from './scenes/LeaderBoardScene'
+import CreditScene from './scenes/CreditScene';
+import BattleScene from './scenes/BattleScene';
+import GameOvereScene from './scenes/GameOverScene';
+import IntroScene from './scenes/IntroScene';
+import InputScene from './scenes/InputScene';
+import LeaderBoardScene from './scenes/LeaderBoardScene';
 
 
 class Game extends Phaser.Game {

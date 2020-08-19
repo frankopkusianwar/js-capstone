@@ -11,7 +11,6 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   preload() {
-
     // this.add.image(400, 200, 'logo', { width: '100px', height: '100px' } );
 
     const progressBar = this.add.graphics();
@@ -62,12 +61,12 @@ export default class PreloaderScene extends Phaser.Scene {
       progressBar.fillRect(250, 300, 300 * value, 30);
     });
 
-  
+
     this.load.on('fileprogress', (file) => {
       assetText.setText(`Loading asset: ${file.key}`);
     });
 
-  
+
     this.load.on('complete', () => {
       progressBar.destroy();
       progressBox.destroy();
@@ -94,7 +93,6 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('menu_button2', 'src/assets/ui/menu_button2.png');
 
 
-
     this.load.image('tiles', 'src/assets/ui/map/spritesheet.png');
     this.load.tilemapTiledJSON('map', 'src/assets/ui/map/map.json');
     this.load.tilemapTiledJSON('battle-map', 'src/assets/ui/map/battle.json');
@@ -103,11 +101,9 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.spritesheet('explosion', 'src/assets/ui/explosion.png', { frameWidth: 400, frameHeight: 400 });
     this.load.spritesheet('sword_flash', 'src/assets/ui/sword_flash.png', { frameWidth: 33, frameHeight: 33 });
     this.load.spritesheet('dragon', 'src/assets/ui/Dragon.png', { frameWidth: 200, frameHeight: 128 });
-
   }
 
   ready() {
-    
     this.scene.start('Input');
     this.readyCount += 1;
     if (this.readyCount === 2) {

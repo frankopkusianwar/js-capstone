@@ -31,7 +31,7 @@ export default class CreditsScene extends Phaser.Scene {
 
     this.madeByText.setY(1000);
     this.madeByText1.setY(1200);
-    
+
     this.creditsTween = this.tweens.add({
       targets: this.creditsText,
       y: -200,
@@ -49,9 +49,9 @@ export default class CreditsScene extends Phaser.Scene {
       ease: 'Power1',
       duration: 8000,
       delay: 1000,
-      onComplete: function () {
+      onComplete() {
         this.destroy;
-      }
+      },
     });
 
     this.madeByTween1 = this.tweens.add({
@@ -64,8 +64,8 @@ export default class CreditsScene extends Phaser.Scene {
         this.scene.start('Title');
       }.bind(this),
     });
-    
   }
+
   update() {
     if (this.keySpace.isDown) {
       this.scene.start('Title');

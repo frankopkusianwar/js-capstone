@@ -1,4 +1,4 @@
-import { addScore, getScores } from '../objects/scoreBoard'
+import { addScore, getScores } from '../objects/scoreBoard';
 
 it('should post an object to the games API', () => {
   addScore().then(data => {
@@ -29,4 +29,3 @@ it('should get score', () => {
     );
   }).catch(() => {});
 });
-
