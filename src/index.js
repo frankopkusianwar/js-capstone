@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import Phaser from 'phaser';
 import './style/style.css';
 import config from './config/config';

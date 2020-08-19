@@ -1,3 +1,6 @@
+/* eslint class-methods-use-this: 0 */
+/* eslint no-undef: 0 */
+
 import 'phaser';
 import Fireball from '../Fireball';
 import Warrior from '../objects/Warrior';

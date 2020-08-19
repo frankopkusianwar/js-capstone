@@ -1,4 +1,6 @@
-import 'phaser';
+/* eslint no-unused-expressions: 0 */
+
+import Phaser from 'phaser';
 import Button from '../objects/buttons';
 import config from '../config/config';
 import { addScore } from '../objects/scoreBoard';

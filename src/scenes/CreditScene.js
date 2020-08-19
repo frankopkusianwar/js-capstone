@@ -1,3 +1,6 @@
+/* eslint no-unused-expressions: 0 */
+/* eslint no-undef: 0 */
+/* eslint func-names: 0 */
 import 'phaser';
 import config from '../config/config';
 

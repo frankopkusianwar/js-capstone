@@ -19,7 +19,6 @@ export default class InputScene extends Phaser.Scene {
 
     submitButton.addEventListener('click', () => {
       if (input.value !== '') {
-        const loading = this.add.text(350, 250, 'Loading...', { color: 'white', fontSize: '26px ' });
         localStorage.setItem('name', JSON.stringify(input.value));
         this.scene.start('Title');
       } else {
