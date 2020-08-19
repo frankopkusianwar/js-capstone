@@ -11,7 +11,6 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   preload() {
-    // this.add.image(400, 200, 'logo', { width: '100px', height: '100px' } );
 
     const progressBar = this.add.graphics();
     const progressBox = this.add.graphics();
@@ -37,7 +36,7 @@ export default class PreloaderScene extends Phaser.Scene {
       y: height / 2 - 5,
       text: '0%',
       style: {
-        font: '18px monospace',
+        font: '18px',
         fill: '#ffffff',
       },
     });
