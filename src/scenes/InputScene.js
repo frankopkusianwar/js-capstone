@@ -1,5 +1,4 @@
 import Phaser from 'phaser';
-import { addScore } from '../objects/scoreBoard'
 
 export default class InputScene extends Phaser.Scene {
   constructor() {
