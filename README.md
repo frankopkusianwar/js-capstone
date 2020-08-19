@@ -4,7 +4,7 @@
 
 Please click [here](https://www.notion.so/microverse/RPG-game-f94a617841e240a293c0b6928beebe89) to view the project specifications
 
-You can also checkout the GDD of the project [here]()
+You can also checkout the GDD of the project [here](https://github.com/frankopkusianwar/js-capstone/blob/feature-game/src/assets/docs/gdd.md)
 
 ## How To Play
 
