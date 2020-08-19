@@ -9,11 +9,7 @@ export default class WorldScene extends Phaser.Scene {
   }
 
   onMeetEnemy() {
-    // shake the world
     this.cameras.main.shake(3000);
-
-    // start battle
-
     this.scene.start('Battle');
   }
 
