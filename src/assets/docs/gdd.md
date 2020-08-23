@@ -48,7 +48,7 @@ This is the description of the enemy's features:
 
 - Dragon: Shoots fireballs to attack.
 
-![screenshots](../../../battle.png)
+![screenshots](../../../screenshots/battle.PNG)
 
 
 ## Attacks
