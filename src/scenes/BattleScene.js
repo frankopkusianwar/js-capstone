@@ -2,9 +2,9 @@
 /* eslint no-undef: 0 */
 
 import 'phaser';
-import Fireball from '../Fireball';
-import Warrior from '../objects/Warrior';
-import Dragon from '../objects/Dragon';
+import Fireball from '../objects/Fireball';
+import Warrior from '../entity/Warrior';
+import Dragon from '../entity/Dragon';
 import entity from '../config/EntityConfig';
 
 export default class BattleScene extends Phaser.Scene {

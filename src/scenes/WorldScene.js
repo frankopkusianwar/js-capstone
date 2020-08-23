@@ -1,7 +1,7 @@
 /* eslint no-undef: 0 */
 import 'phaser';
-import Warrior from '../objects/Warrior';
-import Dragon from '../objects/Dragon';
+import Warrior from '../entity/Warrior';
+import Dragon from '../entity/Dragon';
 
 export default class WorldScene extends Phaser.Scene {
   constructor() {
