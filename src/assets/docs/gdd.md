@@ -1,6 +1,6 @@
 # Introduction
 
-Here I explain the Work I did to come up with the game, I wrote how I planned the game and the while story of this game. 
+This is an explanation of the Work I did to come up with the game, I wrote how I planned the game and the different time frames for each activity including the game story. 
 
 # Story
 
@@ -8,7 +8,7 @@ Here I explain the Work I did to come up with the game, I wrote how I planned th
 
 Thousands of years ago, in the era when dragons still existed. They used to invade villages where many people lost their lives due to these attackscks. There emerged a hero named Daniel the son of  a Dragon slayer whose farther had trained and given the techniques of killing dragons. Daniel moves into an adventourous world where he comes face to face with these dragons and fights them only with his sword!! Daniel is the only hope for the human race. GOOD LUCK !!
 
-## PHASE 1 (World Scene I)
+## PHASE 1 (World Scene)
 
 Daniel arrives at the scene which is a world that is the dragon territory
 
@@ -22,7 +22,7 @@ He is moved into a one on one scene with this dragon
 
 The dragon uses fireballs as its weapon
 
-Daniel uses the sword as his weapon( a flashing sword)
+Daniel uses the sword as his weapon(a flashing sword)
 
 Both daniel and the dragon have health as a value that deacreases when attacked
 
