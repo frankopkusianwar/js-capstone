@@ -21,9 +21,7 @@ export default class LeaderBoardScene extends Phaser.Scene {
 
         padding += 40;
       }
-    }).catch({
-
-    });
+    }).catch(() => {});
 
     this.menuButton = new Button(this, 400, 500, 'menu_button1', 'menu_button2', 'Menu', 'Title');
   }
