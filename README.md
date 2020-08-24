@@ -54,7 +54,7 @@ Your score will only be captured when the game is over!
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://sharp-shirley-7ecb74.netlify.app)
 
 ## Getting Started
 
