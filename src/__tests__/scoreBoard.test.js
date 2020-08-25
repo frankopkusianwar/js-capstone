@@ -30,8 +30,22 @@ it('should get score', () => {
   }).catch(() => {});
 });
 
-it('should send an object to the scores API', () => {
-  addScore().then(data => {
-    expect(typeof data).toBe('object');
+it('Should return error message if only name is provided', () => {
+  addScore('frank').then(data => {
+    expect(data).toEqual(
+        expect.objectContaining({
+          message: 'You need to provide a valid score for the leaderboard',
+        }),
+    );
+  }).catch(() => {});
+});
+
+it('Should return error message if only score is provided', () => {
+  addScore('frank').then(data => {
+    expect(data).toEqual(
+        expect.objectContaining({
+          message: 'You need to provide a valid user for the score',
+        }),
+    );
   }).catch(() => {});
 });
