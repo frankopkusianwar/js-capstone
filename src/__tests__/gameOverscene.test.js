@@ -1,3 +1,5 @@
+/* eslint no-undef: 0 */
+
 import GameOverScene from '../scenes/GameOverScene';
 
 test('gameOverScene should be a subclass of Phaser.Scene', () => {

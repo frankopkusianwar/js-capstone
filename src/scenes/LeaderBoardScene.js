@@ -8,7 +8,6 @@ export default class LeaderBoardScene extends Phaser.Scene {
   }
 
   create() {
-
     getScores().then((scores) => {
       scores.sort((a, b) => b.score - a.score);
       this.add.text(195, 50, 'RANK      NAME                 SCORE');
